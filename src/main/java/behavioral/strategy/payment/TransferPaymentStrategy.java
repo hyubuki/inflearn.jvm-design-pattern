@@ -5,6 +5,8 @@ import behavioral.strategy.PaymentRequest;
 import behavioral.strategy.PaymentResult;
 import behavioral.strategy.PaymentStrategy;
 import behavioral.strategy.PaymentType;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.UUID;
 
 public class TransferPaymentStrategy implements PaymentStrategy {
@@ -22,7 +24,6 @@ public class TransferPaymentStrategy implements PaymentStrategy {
 
   @Override
   public PaymentResult pay(PaymentRequest request) {
-
     // 유효성 검증
     if(false) {
       return new PaymentResult(false, null, "계좌 이체 중 실패하였습니다.");
